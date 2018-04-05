@@ -13,11 +13,15 @@ Redirects from the root site of a multisite project to a language specific netwo
 
 
 == Description ==
-WordPress plugin which redirects from the root site of a multisite project to a language specific network site. The decision which language should be used is based in the browser language of the user which is usually sent as 'Accept-Language' header (PHP: $_SERVER['HTTP_ACCEPT_LANGUAGE']).
+WordPress plugin which redirects from the root site of a multisite project to a language specific network site.
+
+**Please Note: This plugin doesn't allow content on the root site! Please read this description carefully to see if this works for you.**
+
+The decision which language should be used is based in the browser language of the user which is usually sent as 'Accept-Language' header (PHP: $_SERVER['HTTP_ACCEPT_LANGUAGE']).
 
 The plugin provides a configuration page where supported languages, redirect targets and the default language can be configured.
 
-The plugin should be activated only on the root site. Once redirected it is useless and shouldn't be active on the language specific network site.
+The plugin should be activated only on the root site. It shouldn't be active on the language specific network site.
 
 The plugin is developed on [Github](https://github.com/bjoerne2/language-redirect). Feel free to fork the project or create pull requests. 
 
@@ -53,3 +57,6 @@ The plugin is developed on [Github](https://github.com/bjoerne2/language-redirec
 
 = 1.0.4 =
 * Remove buggy robots.txt handling
+
+= 1.0.5 =
+* Don't redirect robots.txt
