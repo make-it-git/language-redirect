@@ -53,6 +53,11 @@ function language_redirect_plugins_loaded() {
 	if ( $redirect_location == null ) {
 		return;
 	}
+	$cookieName = '_lng_redir_location';
+	if (isset($_COOKIE[$cookieName])) {
+		return;
+	}
+	setcookie($cookieName, true, time() + 3600 * 24);
 	if ( $redirect_location[0] == '/' ) {
 		header( 'Location: ' . site_url( $redirect_location ) );
 	} else {
